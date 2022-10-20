@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap');
-@import url('./_/_mixin.scss');
-@import url('./_/_variable.scss');
 // -- Define variable --
 $grey-9: #dcdcdc;
 $grey-8: #c2c2c2;
@@ -11,17 +9,12 @@ $grey-1: #121212;
 $redwine: #901111;
 $logo_color: rgb(141, 215, 204);
 $darkgold: rgb(107, 78, 38);
-
 // -- End of variable --
-// -- animation
-@keyframes test {}
-
 
 // -- Define mixin --
 @mixin dimension($w, $h) {
     width: $w;
     height: $h;
-
 }
 
 // width, height 
@@ -54,17 +47,17 @@ $darkgold: rgb(107, 78, 38);
     background-repeat: no-repeat;
 }
 
-// @mixin animation($name,$time,$count,$funtion){
-//     animation-name: $name;
-//     animation-duration: $time;
-//     animation-iteration-count: $count;
-//     animation-timing-function: $funtion;
-// }
+@mixin keyframe($keyframe_name, $keyframe_duration, $keyframe_count, $keyframe_time_function) {
+    animation-name: $keyframe_name;
+    animation-duration: $keyframe_duration;
+    animation-iteration-count: $keyframe_count;
+    animation-timing-function: $keyframe_time_function;
+}
 
-@mixin transition($time, $dealy, $funtion) {
-    transition-duration: $time;
-    transition-delay: $delay;
-    transition-timing-function: $funtion;
+@mixin transition($transition_time, $transition_dealy, $transition_time_funtion) {
+    transition-duration: $transition_time;
+    transition-delay: $transition_dealy;
+    transition-timing-function: $transition_time_funtion;
 
 }
 
@@ -81,166 +74,49 @@ html {
     ::-webkit-scrollbar {
         width: 0px;
     }
+
+    scroll-behavior: smooth;
 }
 
 body {
     @include dimension(100%, auto);
     position: relative;
+    font-family: 'Noto Serif TC';
 }
 
-header {
-    @include dimension(100%, 103px);
-    position: relative;
-    border-top: 7px solid #1370a5;
-    background-color: $grey-9;
-    z-index: 1;
+//---keyframe
 
-    nav {
-        @include flex-row(flex-end, center);
-        position: relative;
-        max-width: 1440px;
-        height: 100%;
-        margin: auto;
-        background-color: $grey-8;
-
-        .nav-logo {
-            @include flex-row(center, center);
-            height: 135px;
-            width: 135px;
-            background-color: gray;
-            position: absolute;
-            top: 15px;
-            left: 0;
-            border-radius: 50%;
-            z-index: 100;
-        }
-
-        .nav-btns {
-            a+a {
-                margin-left: 12px;
-            }
-
-            @include flex-row(flex-end, center);
-            position: relative;
-            height: 100%;
-            flex: 1;
-            padding: 0 28px;
-            background-color: #939393;
-
-            .nav-style {
-                @include flex-row(center, center);
-                position: relative;
-                padding: 4px 8px;
-                text-decoration: none;
-                color: $darkgold;
-                font-weight: 700;
-                font-size: 1.2em;
-                letter-spacing: 1px;
-                transition: 0.3s ease;
-
-                &:hover {
-                    background-color: #fff;
-                }
-
-                &#order .order-menu {
-                    width: 100%;
-                    position: absolute;
-                    top: 100%;
-                    list-style: none;
-                    display: none;
-                    line-height: 40px;
-                    border: 1px black solid;
-                    background-color: #eee;
-                    // transform: translateY(-50%);
-                }
-
-                &#order:hover .order-menu {
-                    display: block;
-                    width: 100%;
-
-                    & li:hover {
-                        background-color: #000;
-                        color: #eee;
-                    }
-                }
-            }
-
-            &:after {
-                content: "";
-                position: absolute;
-                right: 0;
-                height: 36px;
-                border: 2px solid $grey-2;
-            }
-        }
-
-        .social-media-area {
-            @include flex-row(center, center);
-            position: relative;
-            padding: 0 16px 0 32px;
-            background-color: #a9a9a9;
-
-            a+a {
-                margin-left: 12px;
-            }
-
-
-            .social-style {
-                width: 44px;
-                height: 44px;
-                border-radius: 50%;
-            }
-
-            #facebook {
-                @include image('../img/FB.png');
-                transition: .4s ease;
-                scale: 1;
-
-                &:hover {
-                    scale: 1.15;
-                }
-            }
-
-            #instagram {
-                @include image('../img/IG.png');
-                transition: .4s ease;
-                scale: 1;
-
-                &:hover {
-                    scale: 1.15;
-                }
-            }
-        }
-
-
+@keyframes rotate {
+    0% {
+        transform: rotate(360deg);
     }
 
-    .ham-icon,
-    #toggle_menu {
-        display: none;
+    25% {
+        transform: rotate(270deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
     }
 }
 
-// End of header
 
-.pagination {
-    @include dimension(100%, 40px);
-    @include flex-row(flex-end, center);
-    position: absolute;
-    top: 103px;
+//---end of keyframe
 
-    .content {
-        @include flex-row(space-around, center);
-        @include dimension(calc(50% + 720px - 67px), 100%);
-        padding: 0 10%;
-        color: white;
-        background-color: #000;
-    }
-}
-
-// End of pagination 
 
 main {
+    position: relative;
+    top: 103px;
+    width: 100%;
+
     .banner {
         @include dimension(100%, 1029px);
         @include flex-row(center, center);
@@ -253,157 +129,176 @@ main {
     .product-showcase {
         @include dimension(100%, 1029px);
         @include flex-row(center, center);
+        position: relative;
         color: $darkgold;
         font-family: 'Noto Serif TC';
         font-size: 3rem;
         background-color: $grey-9;
+        overflow: hidden;
+
+        .see-through-style {
+            @include dimension(100px, 100px);
+            border-radius: 50%;
+            position: absolute;
+
+            &:hover {
+                @include transition(0s, 0s, linear);
+                transform: scale(1.5);
+            }
+        }
+
+        .see-through1 {
+            background-color: $grey-7;
+            top: 400px;
+            left: 100px;
+        }
+
+        .see-through2 {
+            background-color: $grey-7;
+            left: 180px;
+            top: 50px;
+        }
+
+        .see-through3 {
+            background-color: $grey-7;
+            top: 90px;
+            right: 400px;
+        }
+
+
+        .profile {
+            @include dimension(709px, 278px);
+            position: absolute;
+            top: 217px;
+            left: 335px;
+            background-color: $grey-8;
+        }
+
+        .description {
+            position: absolute;
+            top: 680px;
+            left: 337px;
+            background-color: $grey-7;
+
+            .title {
+                position: relative;
+                padding-top: 48px;
+
+                .text {
+                    position: absolute;
+                    top: 0;
+                    font-size: 40px;
+                    z-index: 1;
+                }
+
+                .bg {
+                    // @include dimension(auto, 100%);
+                    position: absolute;
+                    top: 0;
+                    left: -48px;
+                    color: $grey-8;
+                    z-index: 0;
+                }
+            }
+
+            p {
+                @include dimension(600px, auto);
+                padding-top: 40px;
+                font-size: 16px;
+            }
+        }
+
+        .rotate-img {
+            @include dimension(812px, 812px);
+            @include keyframe(rotate, 10s, infinite, linear);
+            @include image('../img/cake.jpg');
+            position: absolute;
+            top: 50%;
+            right: -406px;
+            translate: 0 -50%;
+            border-radius: 50%;
+            background-color: $grey-8;
+        }
     }
 
-    .main-product {
-        @include dimension(100%, 1029px);
-        @include flex-row(center, center);
+    .new-product {
+        @include dimension(100%, 775px);
+        @include flex-row(flex-start, center);
         color: $darkgold;
         font-family: 'Noto Serif TC';
         font-size: 3rem;
         background-color: $grey-1;
+
+        img {
+            @include dimension(1098px, 100%);
+            background-color: $grey-2;
+        }
+
+        .text {
+            @include flex-col(center, flex-start);
+            height: 100%;
+            flex: 1;
+            padding-left: 108px;
+            padding-right: 72px;
+            border: 4px solid $darkgold;
+
+            .title {
+                @include dimension(403px, 118px);
+                @include flex-row(flex-start, flex-end);
+                position: relative;
+
+                h4 {
+                    z-index: 1;
+                }
+
+                .bg {
+                    @include dimension(403px, 118px);
+                    @include flex-row(flex-start, flex-end);
+                    position: absolute;
+                    left: -60px;
+                    color: $grey-2;
+                    font-size: 72px;
+                    z-index: 0;
+                }
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            button {
+                margin-top: 100px;
+                padding: 12px 18px;
+                color: $darkgold;
+                font-size: 16px;
+                border: none;
+                border-radius: 8px;
+                background-color: #000;
+                cursor: pointer;
+
+                &:hover {
+                    outline: 4px solid $grey-2;
+                }
+            }
+        }
     }
 
     .product-series {
         @include dimension(100%, 1029px);
-        @include flex-row(center, center);
+        // @include flex-row(center, center);
         color: $darkgold;
         font-family: 'Noto Serif TC';
         font-size: 3rem;
         background-color: $grey-9;
+
+        .text-roll {
+            @include dimension(100%, 111px);
+            display: flex;
+            align-items: center;
+            color: white;
+            background-color: black;
+        }
     }
 }
 
 // End of main 
-
-footer {
-    @include dimension(100%, 811px);
-    position: relative;
-    background-color: $grey-7;
-    color: $darkgold;
-
-    .information {
-        position: absolute;
-        top: 50%;
-        left: 12%;
-        translate: 0 -50%;
-        padding: 16px 24px;
-        font-size: 1rem;
-        background-color: $grey-6;
-
-        #footer_title {
-            @include flex-row(flex-start, flex-end);
-            margin-bottom: 8px;
-            font-size: 1.2rem;
-            border-bottom: 1px solid $darkgold;
-
-            .zh {
-                font-size: 2.2rem;
-            }
-
-            .en {
-                padding: 0 0 0 8px;
-                font-size: 1.6rem;
-            }
-        }
-    }
-
-    .map {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        translate: 12px -50%;
-        padding: 12px;
-
-        iframe {
-            @include dimension(600px, 450px);
-            border: 0;
-            border-radius: 10px;
-        }
-    }
-}
-
-// Media Query 
-@media screen and (max-width: 720px) {
-    header {
-        position: relative;
-
-        nav {
-
-            padding: 0 20px;
-
-            .nav-logo {
-                @include dimension(96px, 96px);
-                position: absolute;
-                top: 0;
-                left: 50%;
-                translate: -50% 0;
-            }
-
-            .nav-btns,
-            .social-media-area {
-                display: none;
-            }
-
-        }
-
-        .ham-icon {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            display: block;
-            font-size: 3rem;
-            // background-color: rgb(48, 68, 111);
-            z-index: 20;
-        }
-
-        #ham_icon:checked~#toggle_menu {
-            display: block;
-            visibility: visible;
-        }
-
-        #toggle_menu {
-            @include dimension(100%, 100vh);
-            position: fixed;
-            top: 0;
-            display: none;
-            visibility: hidden;
-            background-color: rgba(131, 105, 54, 0.5);
-        }
-    }
-
-    .pagination {
-        .content {
-            width: 100%;
-            color: white;
-        }
-    }
-
-    footer {
-
-
-        .information,
-        .map {
-            position: relative !important;
-            top: 0;
-            left: 0;
-            translate: 0 0;
-        }
-
-        // .map {
-        //     display: none;
-        // }
-    }
-
-
-    #phone_Ham:checked+.phone-ham-list {
-        visibility: visible;
-        height: 100vh;
-        width: 100%;
-    }
-}
