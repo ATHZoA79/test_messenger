@@ -142,15 +142,21 @@ main {
         // background-color: $grey-7;
 
         .logo {
-            @include dimension(605px, 126px);
-            @include flex-row(center, center);
-            background-color: black;
+            @include dimension(900px, 126px);
+            @include flex-row(space-between, center);
+            // background-color: black;
             color: $darkgold;
             font-size: 2rem;
 
             .logo-img {
                 @include dimension(434px, 100%);
-                @include image('../img')
+                background-color: #7e7e7e;
+            }
+
+            .logo-text {
+                @include dimension(330px, 100%);
+                background-color: #901111;
+                color: black;
             }
         }
     }
@@ -187,7 +193,7 @@ main {
         }
 
         .slogan-oval1 {
-            @include dimension(646px,235px);
+            @include dimension(646px, 235px);
             @include flex-row(center, center);
             border: 1px solid black;
             background-color: $grey-6;
@@ -272,46 +278,3 @@ main {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

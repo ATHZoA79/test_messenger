@@ -34,6 +34,9 @@ main .hr-head {
   margin: auto;
   background-color: #dcdcdc;
 }
+main .hr-head p {
+  font-size: 24px;
+}
 main .hr-head p::before {
   content: "———";
 }

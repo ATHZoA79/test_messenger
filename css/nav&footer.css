@@ -112,7 +112,7 @@ header nav .nav-btns:after {
   position: absolute;
   right: 0;
   height: 36px;
-  border: 2px solid #242424;
+  border-right: 2px solid #242424;
 }
 header nav .social-media-area {
   display: flex;

@@ -118,7 +118,7 @@ main {
     // background-color: $grey-9;
 
     p {
-
+font-size: 24px;
       &::before {
         content: '———';
 
@@ -164,16 +164,16 @@ main {
 
           .news-text-title {
             position: absolute;
-            top: 107px;
-            left: 49px;
+            top: 147px;
+            left: 51px;
             background-color: #555;
             font-size: 18px;
           }
 
           .new-text-content {
-            @include dimension(440px, 118px);
+            @include dimension(440px, 92px);
             position: absolute;
-            left: 49px;
+            left: 51px;
             top: 201px;
             background-color: #901111;
           }
@@ -182,8 +182,8 @@ main {
         .news-date-duration {
           @include dimension(161px, 13px);
           position: absolute;
-          top: 318px;
-          left: 49px;
+          top: 322px;
+          left: 51px;
           background-color: blue;
 
         }
@@ -198,8 +198,8 @@ main {
           background-color: $grey-9;
           border-radius: 10px;
           position: absolute;
-          bottom: 0;
-          right: 0;
+          top: 318px;
+          right: 60px;
 
           &:hover {
             i {

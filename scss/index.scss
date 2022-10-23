@@ -232,7 +232,7 @@ header {
                 position: absolute;
                 right: 0;
                 height: 36px;
-                border: 2px solid $grey-2;
+                border-right: 2px solid $grey-2;
             }
         }
 
@@ -751,16 +751,15 @@ footer {
 
 
 // -- 720px
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 431px) {
     header {
         position: relative;
 
         nav {
-
             padding: 0 20px;
 
             .nav-logo {
-                @include dimension(96px, 96px);
+                @include dimension(70px, 72px);
                 position: absolute;
                 top: 0;
                 left: 50%;
@@ -797,14 +796,18 @@ footer {
             visibility: hidden;
             background-color: rgba(131, 105, 54, 0.5);
         }
+
+        .pagination {
+            display: none !important;
+
+            .content {
+                width: 100%;
+                color: white;
+            }
+        }
+
     }
 
-    .pagination {
-        .content {
-            width: 100%;
-            color: white;
-        }
-    }
 
     footer {
 

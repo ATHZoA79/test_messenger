@@ -32,6 +32,9 @@ main .hr-head {
   padding: 150px 0;
   margin: auto;
 }
+main .hr-head p {
+  font-size: 24px;
+}
 main .hr-head p::before {
   content: "———";
 }
@@ -75,16 +78,16 @@ main .news-container .news-card .news-info .news-text {
 }
 main .news-container .news-card .news-info .news-text .news-text-title {
   position: absolute;
-  top: 107px;
-  left: 49px;
+  top: 147px;
+  left: 51px;
   background-color: #555;
   font-size: 18px;
 }
 main .news-container .news-card .news-info .news-text .new-text-content {
   width: 440px;
-  height: 118px;
+  height: 92px;
   position: absolute;
-  left: 49px;
+  left: 51px;
   top: 201px;
   background-color: #901111;
 }
@@ -92,8 +95,8 @@ main .news-container .news-card .news-info .news-date-duration {
   width: 161px;
   height: 13px;
   position: absolute;
-  top: 318px;
-  left: 49px;
+  top: 322px;
+  left: 51px;
   background-color: blue;
 }
 main .news-container .news-card .news-info a {
@@ -108,8 +111,8 @@ main .news-container .news-card .news-info .news-btn-area {
   background-color: #dcdcdc;
   border-radius: 10px;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  top: 318px;
+  right: 60px;
 }
 main .news-container .news-card .news-info .news-btn-area:hover i {
   transform: translateX(1em);
