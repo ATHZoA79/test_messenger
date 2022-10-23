@@ -41,6 +41,7 @@ $darkgold: rgb(107, 78, 38);
 
 //---end of keyframe
 
+
 // -- Define mixin --
 @mixin dimension($w, $h) {
     width: $w;
@@ -146,6 +147,11 @@ main {
             background-color: black;
             color: $darkgold;
             font-size: 2rem;
+
+            .logo-img {
+                @include dimension(434px, 100%);
+                @include image('../img')
+            }
         }
     }
 
@@ -156,7 +162,7 @@ main {
         // background-color: $grey-7;
 
         .banner {
-            @include dimension(1229px, 565px);
+            @include dimension(1091px, 505px);
             @include flex-row(center, center);
             background-color: $grey-7;
             color: $darkgold;
@@ -175,20 +181,20 @@ main {
             @include flex-row(center, center);
             background-color: white;
             color: black;
-            font-size: 1.5rem;
+            font-size: 24px;
             position: absolute;
             z-index: 1;
         }
 
         .slogan-oval1 {
-            @include dimension(800px, 290px);
+            @include dimension(646px,235px);
             @include flex-row(center, center);
             border: 1px solid black;
             background-color: $grey-6;
             border-radius: 50%;
 
             .slogan-oval2 {
-                @include dimension(730px, 295px);
+                @include dimension(587.97px, 235.73px);
                 @include flex-row(center, center);
                 @include keyframe(rotate, 4s, infinite, linear);
                 border: 1px solid black;
@@ -266,3 +272,46 @@ main {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

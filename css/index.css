@@ -70,7 +70,7 @@ header nav .nav-logo {
   align-items: center;
   height: 102px;
   width: 102px;
-  background-image: url("../img/logo-bg-white.png");
+  background-image: url("../img/NAV/Logo/logo-bg-white.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -159,7 +159,7 @@ header nav .social-media-area .social-style {
 header nav .social-media-area #facebook {
   width: 40px;
   height: 40px;
-  background-image: url("../img/FB.png");
+  background-image: url("../img/NAV/社群/FB.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -172,7 +172,7 @@ header nav .social-media-area #facebook:hover {
 header nav .social-media-area #instagram {
   width: 38px;
   height: 38px;
-  background-image: url("../img/IG.png");
+  background-image: url("../img/NAV/社群/IG.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -220,7 +220,7 @@ main .banner {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../img/banner_img.jfif");
+  background-image: url("../img/首頁/banner_img.jfif");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -273,7 +273,7 @@ main .product-showcase .profile {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../img/義式奶油檸檬塔.png);
+  background-image: url(../img/首頁/商品列表/義式奶油檸檬塔.png);
   position: absolute;
   top: 217px;
   left: 231px;
@@ -331,7 +331,7 @@ main .product-showcase .rotate-img {
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  background-image: url("../img/檸檬塔去背.png");
+  background-image: url("../img/首頁/檸檬塔去背.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -557,7 +557,7 @@ footer .copy-right {
 }
 @media screen and (min-width: 1241px) and (max-width: 1440px) {
   header nav {
-    margin: auto;
+    padding: 0 20px;
     width: calc(100% - 50px);
     height: 100%;
   }
@@ -576,7 +576,7 @@ footer .copy-right {
 }
 @media screen and (min-width: 720px) and (max-width: 1240px) {
   header nav {
-    margin: auto;
+    padding: 0 20px;
     width: calc(100% - 30px);
     height: 100%;
   }

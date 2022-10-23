@@ -120,7 +120,8 @@ header {
             @include flex-row(center, center);
             height: 102px;
             width: 102px;
-            background-color: gray;
+            // background-color: gray;
+            @include image('../img/NAV/Logo/logo-bg-white.png');
             position: absolute;
             top: 15px;
             left: 0;
@@ -146,7 +147,7 @@ header {
             height: 100%;
             flex: 1;
             padding: 0 28px;
-            background-color: #939393;
+            background-color: $logo_color;
 
             .nav-style {
                 @include flex-row(center, center);
@@ -200,7 +201,7 @@ header {
             @include flex-row(center, center);
             position: relative;
             padding: 0 16px 0 32px;
-            background-color: #a9a9a9;
+            background-color: $logo_color;
 
             a+a {
                 margin-left: 12px;
@@ -213,7 +214,7 @@ header {
 
             #facebook {
                 @include dimension(40px, 40px);
-                @include image('../img/FB.png');
+                @include image('../img/NAV/社群/FB.png');
                 transition: 0.4s ease;
                 scale: 1;
 
@@ -224,7 +225,7 @@ header {
 
             #instagram {
                 @include dimension(38px, 38px);
-                @include image('../img/IG.png');
+                @include image('../img/NAV/社群/IG.png');
                 background-size: contain;
                 transition: 0.4s ease;
                 scale: 1;
@@ -333,25 +334,7 @@ footer {
 
 // Media Query
 
-// --1600px 防止文字爆版
-@media screen and(min-width:1441px) and (max-width:1600px) {
-    main {
 
-        .product-showcase {
-            .rotate-img {
-                right: 0;
-            }
-        }
-
-        .new-product {
-            img {
-                @include dimension(800px, 624px);
-            }
-        }
-    }
-}
-
-// --End of 1600px
 
 
 
@@ -362,6 +345,7 @@ footer {
             @include dimension(calc(100% - 50px), 100%);
 
             .nav-logo {
+                padding: 0 20px;
                 left: 50px;
             }
         }
@@ -379,7 +363,16 @@ footer {
             @include dimension(calc(100% - 30px), 100%);
 
             .nav-logo {
+                padding: 0 20px;
                 left: 30px;
+            }
+        }
+    }
+
+    footer {
+        .map {
+            iframe {
+                width: 500px;
             }
         }
     }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap");
 @import url("./_/_mixin.scss");
 @import url("./_/_variable.scss");
@@ -43,7 +44,10 @@ header nav .nav-logo {
   align-items: center;
   height: 102px;
   width: 102px;
-  background-color: gray;
+  background-image: url("../img/NAV/Logo/logo-bg-white.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: absolute;
   top: 15px;
   left: 0;
@@ -58,7 +62,7 @@ header nav .nav-btns {
   height: 100%;
   flex: 1;
   padding: 0 28px;
-  background-color: #939393;
+  background-color: rgb(141, 215, 204);
 }
 header nav .nav-btns a ul li {
   display: flex;
@@ -116,7 +120,7 @@ header nav .social-media-area {
   align-items: center;
   position: relative;
   padding: 0 16px 0 32px;
-  background-color: #a9a9a9;
+  background-color: rgb(141, 215, 204);
 }
 header nav .social-media-area a + a {
   margin-left: 12px;
@@ -128,7 +132,7 @@ header nav .social-media-area .social-style {
 header nav .social-media-area #facebook {
   width: 40px;
   height: 40px;
-  background-image: url("../img/FB.png");
+  background-image: url("../img/NAV/社群/FB.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -141,7 +145,7 @@ header nav .social-media-area #facebook:hover {
 header nav .social-media-area #instagram {
   width: 38px;
   height: 38px;
-  background-image: url("../img/IG.png");
+  background-image: url("../img/NAV/社群/IG.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -243,21 +247,13 @@ footer .copy-right {
   letter-spacing: 1px;
 }
 
-@media screen and (min-width: 1441px) and (max-width: 1600px) {
-  main .product-showcase .rotate-img {
-    right: 0;
-  }
-  main .new-product img {
-    width: 800px;
-    height: 624px;
-  }
-}
 @media screen and (min-width: 1240px) and (max-width: 1440px) {
   header nav {
     width: calc(100% - 50px);
     height: 100%;
   }
   header nav .nav-logo {
+    padding: 0 20px;
     left: 50px;
   }
 }
@@ -267,7 +263,11 @@ footer .copy-right {
     height: 100%;
   }
   header nav .nav-logo {
+    padding: 0 20px;
     left: 30px;
+  }
+  footer .map iframe {
+    width: 500px;
   }
 }
 @media screen and (max-width: 720px) {

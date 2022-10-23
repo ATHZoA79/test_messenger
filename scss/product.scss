@@ -112,29 +112,41 @@ main {
 
   .hr-head {
     @include dimension(500px, auto);
+    @include flex-row(center, center);
     padding: 150px 0;
     margin: auto;
     background-color: $grey-9;
 
-    hr {
-      border-color: $grey-8;
+    p {
+
+      &::before {
+        content: '———';
+
+      }
+
+      &::after {
+        content: '———';
+
+      }
     }
+
   }
 
   .product-sheet-area {
-    @include dimension(1440px, auto);
+    @include dimension(961px, auto);
     @include flex-row(space-between, center);
     margin: auto;
     padding: 0 60px 167px;
 
     // background-color: $grey-6;
     .product-series {
-      @include dimension(150px, 50px);
+      @include dimension(120px, 50px);
       @include flex-row(center, center);
       background-color: $grey-1;
       color: $darkgold;
       border-radius: 10px;
       text-decoration: none;
+      font-size: 20px;
 
       &:hover {
         background-color: $grey-3;
@@ -143,14 +155,14 @@ main {
   }
 
   .product-card-area {
-    @include dimension(1268px, auto);
-    @include flex-row(space-around, space-between);
+    @include dimension(1000px, 913px);
+    @include flex-row(space-between, space-between);
     flex-wrap: wrap;
     margin: auto;
-    // background-color: $grey-8;
+    background-color: $grey-8;
 
     .product-card {
-      @include dimension(332px, auto);
+      @include dimension(275px, 410px);
       background-color: $grey-9;
 
       &:hover {
@@ -162,22 +174,24 @@ main {
       }
 
       .img-container {
-        @include dimension(100%, 378px);
+        @include dimension(100%, 350px);
         background-color: $grey-7;
         overflow: hidden;
       }
 
       .product-name {
-        padding: 35px 18px 110px;
-        font-size: 20px;
+        @include dimension(100%, calc(410px - 350px));
+        font-size: 18px;
         text-align: center;
 
         h3 {
           @include dimension(100%, 50px);
           color: $darkgold;
-          background-color: $grey-1;
+          background-color: $grey-6;
         }
       }
+
+
     }
   }
 
