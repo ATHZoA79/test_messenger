@@ -557,6 +557,7 @@ footer .copy-right {
 }
 @media screen and (min-width: 1241px) and (max-width: 1440px) {
   header nav {
+    margin: auto;
     width: calc(100% - 50px);
     height: 100%;
   }
@@ -575,6 +576,7 @@ footer .copy-right {
 }
 @media screen and (min-width: 720px) and (max-width: 1240px) {
   header nav {
+    margin: auto;
     width: calc(100% - 30px);
     height: 100%;
   }

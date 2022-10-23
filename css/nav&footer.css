@@ -23,8 +23,8 @@ header {
   width: 100%;
   height: 70px;
   top: 0;
-  border-top: 7px solid #1370a5;
-  background-color: #dcdcdc;
+  border-top: 7px solid white;
+  background-color: rgb(141, 215, 204);
   z-index: 3;
 }
 header nav {
@@ -35,7 +35,7 @@ header nav {
   max-width: 1440px;
   height: 100%;
   margin: auto;
-  background-color: #c2c2c2;
+  background-color: rgb(141, 215, 204);
 }
 header nav .nav-logo {
   display: flex;

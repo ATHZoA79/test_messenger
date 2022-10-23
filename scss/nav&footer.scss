@@ -104,8 +104,8 @@ header {
     @include dimension(100%, 70px);
     // position: fixed;
     top: 0;
-    border-top: 7px solid #1370a5;
-    background-color: $grey-9;
+    border-top: 7px solid white;
+    background-color: $logo_color;
     z-index: 3;
 
     nav {
@@ -114,7 +114,7 @@ header {
         max-width: 1440px;
         height: 100%;
         margin: auto;
-        background-color: $grey-8;
+        background-color: $logo_color;
 
         .nav-logo {
             @include flex-row(center, center);

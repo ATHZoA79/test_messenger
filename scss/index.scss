@@ -680,6 +680,7 @@ footer {
 @media screen and(min-width:1241px) and (max-width:1440px) {
     header {
         nav {
+            margin: auto;
             @include dimension(calc(100% - 50px), 100%);
 
             .nav-logo {
@@ -712,6 +713,7 @@ footer {
 @media screen and(min-width:720px) and (max-width:1240px) {
     header {
         nav {
+            margin: auto;
             @include dimension(calc(100% - 30px), 100%);
 
             .nav-logo {
@@ -754,6 +756,7 @@ footer {
         position: relative;
 
         nav {
+            
             padding: 0 20px;
 
             .nav-logo {
