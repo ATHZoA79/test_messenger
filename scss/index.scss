@@ -556,6 +556,7 @@ main {
 
                     .swiper-product-img {
                         @include dimension(100%, 90%);
+                        padding-bottom: 47px;
                         // border: #901111 1px solid;
 
 
@@ -636,13 +637,13 @@ footer {
     }
 
     .copy-right {
-        width: 350px;
+        @include dimension(419px, 15px);
+        color: white;
         position: absolute;
         bottom: 18px;
         left: 50%;
         translate: -50% 0;
         font-size: 12px;
-        font-weight: 700;
         letter-spacing: 1px;
     }
 }
